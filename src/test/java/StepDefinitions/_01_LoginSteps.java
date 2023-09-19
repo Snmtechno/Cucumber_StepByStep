@@ -2,12 +2,9 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Utilities.GWD;
-import io.cucumber.java.en.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
-import java.time.Duration;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class _01_LoginSteps {
     DialogContent dc=new DialogContent();
