@@ -13,7 +13,7 @@ public class GWD {
         if (driver==null) { // ilk kez 1 defa çalışssın
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20)); // 20 sn mühlet: sayfayı yükleme mühlet
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         }
 
         return driver;

@@ -10,19 +10,49 @@ import java.util.List;
 
 public class _09_DataTableSteps {
     LeftNav ln = new LeftNav();
+    DialogContent dc = new DialogContent();
 
     @And("Click on the element in LeftNav")
     public void clickOnTheElementInLeftNav(DataTable linkler) {
         List<String> strlinkList = linkler.asList(String.class);
 
-        for (String strLink : strlinkList) {
-            System.out.println("strLink = " + strLink);
-
-
+        for (int i = 0; i < strlinkList.size(); i++) {
+            WebElement linkWebElement = ln.getWebElement(strlinkList.get(i));
+            ln.myClick(linkWebElement);
         }
+    }
 
-        for (String strLink : strlinkList) {
-            ln.myClick(ln.getWebElement(strLink));
+
+    @And("Click on the element in Dialog")
+    public void clickOnTheElementInDialog(DataTable buttons) {
+        List<String> strButtonsList = buttons.asList(String.class);
+
+        for (int i = 0; i < strButtonsList.size(); i++) {
+            WebElement linkWebElement = dc.getWebElement(strButtonsList.get(i));
+            dc.myClick(linkWebElement);
+        }
+    }
+
+
+    @And("User sending the keys in Dialog")
+    public void userSendingTheKeysInDialog(DataTable dt) {
+        List<List<String>> items = dt.asLists(String.class);
+
+        for (int i = 0; i < items.size(); i++) {
+            WebElement e = dc.getWebElement(items.get(i).get(0)); // 0. webelement
+            String yazi = items.get(i).get(1);//1. yazısı
+
+            dc.mySendKeys(e, yazi);
+        }
+    }
+
+
+    @And("User delete the element from Dialog")
+    public void userDeleteTheElementFromDialog(DataTable dt) {
+        List<String> silinecekler = dt.asList(String.class);
+
+        for (int i = 0; i < silinecekler.size(); i++) {
+            dc.deleteItem(silinecekler.get(i));
         }
     }
 }
