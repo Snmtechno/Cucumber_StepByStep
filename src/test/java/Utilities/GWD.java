@@ -10,7 +10,7 @@ public class GWD {
 
     public static WebDriver getDriver() {
 
-        if (driver==null) { // ilk kez 1 defa çalışssın
+        if (driver==null) { 
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
@@ -21,15 +21,15 @@ public class GWD {
 
 
     public static void quitDriver() {
-        //test sonucu ekranı bir miktar beklesin diye
+       
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
 
-        //driver kapat
-        if (driver!=null) { //driver var ise
+        
+        if (driver!=null) { 
            driver.quit();
            driver=null;
         }

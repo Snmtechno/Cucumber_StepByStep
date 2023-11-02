@@ -1,7 +1,4 @@
-#Login kontrol senaryosu
-#siteye git,
-#login bilgilerini gir,
-#giriş yaptığını doğrula.
+
 
 Feature: Login functionality
 

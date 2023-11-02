@@ -39,8 +39,8 @@ public class _09_DataTableSteps {
         List<List<String>> items = dt.asLists(String.class);
 
         for (int i = 0; i < items.size(); i++) {
-            WebElement e = dc.getWebElement(items.get(i).get(0)); // 0. webelement
-            String yazi = items.get(i).get(1);//1. yazısı
+            WebElement e = dc.getWebElement(items.get(i).get(0)); 
+            String yazi = items.get(i).get(1);
 
             dc.mySendKeys(e, yazi);
         }

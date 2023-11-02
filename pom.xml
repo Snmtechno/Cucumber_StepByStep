@@ -15,16 +15,13 @@
     </properties>
 
     <dependencies>
-        <!--    bana bi Selenium Web Driver-->
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+       
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.11.0</version>
         </dependency>
 
-        <!--    bana bi cucumber-->
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -32,8 +29,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!--    bana bi testNG-->
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -41,16 +36,13 @@
             <scope>test</scope>
         </dependency>
 
-        <!--    bana bir cucumber-testNG-->
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
             <version>7.9.0</version>
             <scope>test</scope>
         </dependency>
-
-        <!--        SLF4J yokedici-->
+        
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -75,6 +67,7 @@
             <version>7.9.0</version>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>

@@ -16,12 +16,7 @@ public class DialogContent extends Parent{
 
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
-        // Sevgili PageFactory sen bu sayfanın
-        // sahibisin, senden ricam aşağıdaki locatorları
-        // ben kullanacağım zaman driver üzerinden
-        // bulup başlatıp, bana hazır et.
-        // ben artık find element le uğraşmak
-        // istemiyorum.
+        
     }
 
     @FindBy(css="input[formcontrolname='username']")
